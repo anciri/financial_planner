@@ -11,7 +11,7 @@ class Visualizer:
     """Create plots for financial outputs."""
 
     @staticmethod
-    def plot_pnl_annual(pyg_anual_df: pd.DataFrame) -> None:
+    def plot_pnl_annual(pyg_anual_df: pd.DataFrame, show: bool = True):
         fig = go.Figure()
         fig.add_trace(
             go.Bar(
@@ -56,7 +56,9 @@ class Visualizer:
             template="plotly_white",
             xaxis=dict(tickmode="linear", tick0=1, dtick=1),
         )
-        fig.show()
+        if show:
+            fig.show()
+        return fig
 
     @staticmethod
     def plot_cash_flow_monthly(
@@ -64,7 +66,8 @@ class Visualizer:
         capital_necesario: float,
         min_flujo_acumulado: float,
         mes_capital_minimo: int,
-    ) -> None:
+        show: bool = True,
+    ):
         datos = caja_mensual_df.reset_index().rename(columns={"index": "Mes"})
         datos["Mes"] += 1
         fig = make_subplots(specs=[[{"secondary_y": True}]])
@@ -118,4 +121,6 @@ class Visualizer:
         )
         fig.update_yaxes(title_text="Importe Mensual (€)", secondary_y=False)
         fig.update_yaxes(title_text="Flujo Neto Acumulado (€)", secondary_y=True, color="blue")
-        fig.show()
+        if show:
+            fig.show()
+        return fig
