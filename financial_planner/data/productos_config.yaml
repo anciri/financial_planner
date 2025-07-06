@@ -1,0 +1,51 @@
+MBR:
+  valor_venta: 250000
+  coste_maquina: 180000
+  meses_amortizacion: 60
+  porcentaje_mantenimiento_anual: 0.015
+  esquema_pagos_venta:
+    - mes_relativo: 1
+      porcentaje: 0.20
+    - mes_relativo: 3
+      porcentaje: 0.10
+  esquema_pago_coste:
+    - mes_relativo: 1
+      porcentaje: 0.50
+    - mes_relativo: 3
+      porcentaje: 0.50
+  mes_inicio_recurrentes: 4
+  duracion_pagos_recurrentes: 56
+FCM:
+  valor_venta: 500000
+  coste_maquina: 300000
+  meses_amortizacion: 84
+  porcentaje_mantenimiento_anual: 0.01
+  esquema_pagos_venta:
+    - mes_relativo: 1
+      porcentaje: 0.30
+    - mes_relativo: 3
+      porcentaje: 0.20
+  esquema_pago_coste:
+    - mes_relativo: 1
+      porcentaje: 0.50
+    - mes_relativo: 3
+      porcentaje: 0.50
+  mes_inicio_recurrentes: 4
+  duracion_pagos_recurrentes: 56
+Tornillo:
+  valor_venta: 35000
+  coste_maquina: 20000
+  meses_amortizacion: 36
+  porcentaje_mantenimiento_anual: 0.02
+  esquema_pagos_venta:
+    - mes_relativo: 1
+      porcentaje: 0.30
+    - mes_relativo: 3
+      porcentaje: 0.20
+  esquema_pago_coste:
+    - mes_relativo: 1
+      porcentaje: 0.50
+    - mes_relativo: 3
+      porcentaje: 0.50
+  mes_inicio_recurrentes: 4
+  duracion_pagos_recurrentes: 56
