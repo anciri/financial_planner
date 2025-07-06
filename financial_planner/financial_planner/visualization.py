@@ -56,6 +56,7 @@ class Visualizer:
             template="plotly_white",
             xaxis=dict(tickmode="linear", tick0=1, dtick=1),
         )
+
         if show:
             fig.show()
         return fig
@@ -68,6 +69,7 @@ class Visualizer:
         mes_capital_minimo: int,
         show: bool = True,
     ):
+
         datos = caja_mensual_df.reset_index().rename(columns={"index": "Mes"})
         datos["Mes"] += 1
         fig = make_subplots(specs=[[{"secondary_y": True}]])
@@ -124,3 +126,4 @@ class Visualizer:
         if show:
             fig.show()
         return fig
+

@@ -14,6 +14,7 @@ and consolidates cash flow and profit & loss statements.
 
 ## Usage
 
+
 Install the dependencies using `requirements.txt`:
 
 ```bash
@@ -21,6 +22,9 @@ pip install -r requirements.txt
 ```
 
 Run the planner from the command line with:
+=======
+Install the dependencies (pandas, numpy, plotly, pyyaml) and run:
+
 
 ```bash
 python -m financial_planner.scripts.run_planner --output-dir output
@@ -28,11 +32,14 @@ python -m financial_planner.scripts.run_planner --output-dir output
 
 Results will be saved in `output/` and graphs displayed using Plotly.
 
+
 To run the interactive Streamlit interface:
 
 ```bash
 streamlit run financial_planner/scripts/streamlit_app.py
 ```
+
+=======
 
 Run tests with:
 
